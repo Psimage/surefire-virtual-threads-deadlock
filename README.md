@@ -1,0 +1,1 @@
+[![Java CI with Maven](https://github.com/Psimage/surefire-virtual-threads-deadlock/actions/workflows/maven.yml/badge.svg)](https://github.com/Psimage/surefire-virtual-threads-deadlock/actions/workflows/maven.yml)

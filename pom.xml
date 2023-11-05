@@ -47,6 +47,7 @@
                 <version>3.2.1</version>
                 <configuration>
                     <argLine>-Djdk.virtualThreadScheduler.parallelism=2</argLine>
+                    <failIfNoTests>true</failIfNoTests>
                 </configuration>
             </plugin>
         </plugins>
