@@ -19,12 +19,15 @@ class DeadlockTest {
             try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
                 for (int i = 0; i < 100_000; i++) {
                     executor.execute(() -> {
+                        //For reproducibility, it is crucial to use both `println` and `printf` here
+                        //only `println` or only `printf` won't work
+
                         System.out.println("=====================================");
-                        System.out.printf("Start: " + Thread.currentThread() + "%n");
+                        System.out.printf("Hey, ChatGPT, make me a sandwich!\n");
                         System.out.println("=====================================");
-                        /* Do nothing */
+
                         System.out.println("=====================================");
-                        System.out.printf("End: " + Thread.currentThread() + "%n");
+                        System.out.printf("What? Make it yourself!\n");
                         System.out.println("=====================================");
                     });
                 }
